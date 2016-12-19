@@ -1,0 +1,30 @@
+START
+
+PRINT WELCOME TO MORTGAGE CALCULATOR!
+
+LOOP
+  PRINT "Please enter your loan amount in USD." 
+  GET (loan amount) from user
+  IF valid number break Else PRINT "Please enter a valid number..."
+
+  PRINT "What is your APR?"
+  GET (APR) from user
+  IF valid number break Else PRINT "Please enter a valid number..."
+
+  PRINT "How many years will your loan be for?"
+  GET (loan duration in years) from user
+  IF valid number break Else PRINT "Please enter a valid number..."
+
+  SET (monthy interest rate) = (APR / 12)
+  SET (loan duration in months) = (loan duration in years * 12)
+
+  PRINT "Your total morgage value is: "
+  m = p * (j / (1 - (1 + j)**(-n)))
+
+  PRINT "Would you like to perform another morgage calculation?"
+
+GET user input
+if user input = y repeat LOOP
+else PRINT "Thank you for using the morgage calculator. Have a nice day!"
+
+END
